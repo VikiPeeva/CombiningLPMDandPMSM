@@ -1,0 +1,46 @@
+,File name,Net string,Traces
+0,artificialBig.05baf5bf-2d9b-422b-9505-476b35201ef9.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n1, (n5, 's')->n3, (n6, 'd')->n2, n1->(n6, 'd'), n2->(n7, 'k'), n3->(n7, 'k') ], [], [])","[['s', 'b', 'd', 'k'], ['b', 'd', 's', 'k'], ['b', 's', 'd', 'k']]"
+1,artificialBig.256f5479-0ce9-4ef3-b267-6b3f2def79b7.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'b'), (n6, 's'), (n7, 'd'), (n8, 'k') ]
+arcs: [ (n5, 'b')->n3, (n6, 's')->n1, (n6, 's')->n2, (n7, 'd')->n4, n1->(n5, 'b'), n2->(n7, 'd'), n3->(n7, 'd'), n4->(n8, 'k') ], [], [])","[['s', 'b', 'd', 'k']]"
+2,artificialBig.32df24a5-b1f1-426e-b769-9e84d2d6b358.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n2, (n5, 's')->n1, (n6, 'd')->n3, n1->(n4, 'b'), n2->(n6, 'd'), n3->(n7, 'k') ], [], [])","[['s', 'b', 'd', 'k']]"
+3,artificialBig.4ff31820-5ec0-4674-bc85-c2f28a76cd1d.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n3, (n5, 's')->n1, (n6, 'd')->n2, n1->(n4, 'b'), n2->(n7, 'k'), n3->(n7, 'k') ], [], [])","[['d', 's', 'b', 'k'], ['s', 'b', 'd', 'k'], ['s', 'd', 'b', 'k']]"
+4,artificialBig.7eb5326e-71b6-4acc-bf1b-5120994b58c1.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n5, 's')->n1, (n5, 's')->n2, (n6, 'd')->n3, n1->(n4, 'b'), n2->(n6, 'd'), n3->(n7, 'k') ], [], [])","[['s', 'b', 'd', 'k'], ['s', 'd', 'b', 'k'], ['s', 'd', 'k', 'b']]"
+5,artificialBig.8f691c71-7279-41bf-8823-0d7c230a3440.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'j') ]
+arcs: [ (n4, 'b')->n2, (n5, 's')->n1, (n5, 's')->n3, n1->(n4, 'b'), n2->(n6, 'd'), n3->(n7, 'j') ], [], [])","[['s', 'j', 'b', 'd'], ['s', 'b', 'j', 'd'], ['s', 'b', 'd', 'j']]"
+6,artificialBig.906fcd31-8e90-4bf8-874a-b657311fad30.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'a'), (n5, 's'), (n6, 'c'), (n7, 'k') ]
+arcs: [ (n4, 'a')->n1, (n5, 's')->n2, (n5, 's')->n3, n1->(n6, 'c'), n2->(n7, 'k'), n3->(n4, 'a') ], [], [])","[['s', 'a', 'c', 'k'], ['s', 'a', 'k', 'c'], ['s', 'k', 'a', 'c']]"
+7,artificialBig.9afddb73-e401-4699-8055-074efedde771.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'b'), (n6, 's'), (n7, 'd'), (n8, 'k') ]
+arcs: [ (n5, 'b')->n2, (n5, 'b')->n4, (n6, 's')->n1, (n7, 'd')->n3, n1->(n5, 'b'), n2->(n7, 'd'), n3->(n8, 'k'), n4->(n8, 'k') ], [], [])","[['s', 'b', 'd', 'k']]"
+8,artificialBig.9bbc00ed-7a73-4ebc-9d60-4c91760653c3.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n3, (n5, 's')->n1, (n5, 's')->n2, n1->(n4, 'b'), n2->(n6, 'd'), n3->(n7, 'k') ], [], [])","[['s', 'b', 'd', 'k'], ['s', 'd', 'b', 'k'], ['s', 'b', 'k', 'd']]"
+9,artificialBig.a55a565f-0715-4f47-999a-2d00a746e29b.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n2, (n5, 's')->n1, (n5, 's')->n3, n1->(n4, 'b'), n2->(n6, 'd'), n3->(n7, 'k') ], [], [])","[['s', 'b', 'k', 'd'], ['s', 'k', 'b', 'd'], ['s', 'b', 'd', 'k']]"
+10,artificialBig.c9a4c2d6-9d7c-4351-8266-aaa03f8f38e2.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n3, (n5, 's')->n1, (n6, 'd')->n2, n1->(n6, 'd'), n2->(n7, 'k'), n3->(n7, 'k') ], [], [])","[['b', 's', 'd', 'k'], ['s', 'd', 'b', 'k'], ['s', 'b', 'd', 'k']]"
+11,artificialBig.ca5a762c-2c82-4179-af80-a33487b02d2f.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n2, (n5, 's')->n1, (n6, 'd')->n3, n1->(n6, 'd'), n2->(n6, 'd'), n3->(n7, 'k') ], [], [])","[['b', 's', 'd', 'k'], ['s', 'b', 'd', 'k']]"
+12,artificialBig.daeb0724-b6b2-4f57-9160-d981590fced4.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'a'), (n5, 's'), (n6, 'c'), (n7, 'j') ]
+arcs: [ (n4, 'a')->n1, (n5, 's')->n2, (n5, 's')->n3, n1->(n6, 'c'), n2->(n7, 'j'), n3->(n4, 'a') ], [], [])","[['s', 'j', 'a', 'c'], ['s', 'a', 'c', 'j'], ['s', 'a', 'j', 'c']]"
+13,artificialBig.de5ac652-8d1f-49be-96bc-2e35e9e3b45e.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'b'), (n5, 's'), (n6, 'd'), (n7, 'k') ]
+arcs: [ (n4, 'b')->n2, (n4, 'b')->n3, (n5, 's')->n1, n1->(n4, 'b'), n2->(n6, 'd'), n3->(n7, 'k') ], [], [])","[['s', 'b', 'k', 'd'], ['s', 'b', 'd', 'k']]"
+14,artificialBig.e9938a54-9e94-4210-b300-b9836bfe880c.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'b'), (n6, 's'), (n7, 'd'), (n8, 'k') ]
+arcs: [ (n5, 'b')->n4, (n6, 's')->n1, (n6, 's')->n2, (n7, 'd')->n3, n1->(n5, 'b'), n2->(n7, 'd'), n3->(n8, 'k'), n4->(n8, 'k') ], [], [])","[['s', 'd', 'b', 'k'], ['s', 'b', 'd', 'k']]"
