@@ -14,20 +14,18 @@ if __name__ == '__main__':
     # cluster
     df_distance = pd.read_csv(distances_file, index_col=0).fillna(1)
     res = None
-    res = cluster_hierarchical_systematically_one(df_distance)
-    # try:
-    #
-    # except Exception:
-    #     print(measure)
-    #     print(distances_file)
+    for iter in range(1000):
+        res = cluster_hierarchical_systematically_one(df_distance)
+        iter_directory = os.path.join(res_directory, str(iter))
+        if not os.path.exists(iter_directory): os.mkdir(iter_directory)
 
-    # save clustering results
-    for key in res:
-        linkage = key[0]
-        num_clusters = key[1]
-        if num_clusters is None:
-            num_clusters = key[2]
-        df_clust = res[key]
-        df_clust.to_csv(res_directory + "/clustering_hierarchical_{linkage}_{threshold}_{measure}.csv"
-                        .format(linkage=linkage, threshold=num_clusters, measure=measure))
+        # save clustering results
+        for key in res:
+            linkage = key[0]
+            num_clusters = key[1]
+            if num_clusters is None:
+                num_clusters = key[2]
+            df_clust = res[key]
+            df_clust.to_csv(iter_directory + "/clustering_hierarchical_{linkage}_{threshold}_{measure}.csv"
+                            .format(linkage=linkage, threshold=num_clusters, measure=measure))
 
