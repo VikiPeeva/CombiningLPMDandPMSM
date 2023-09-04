@@ -1,0 +1,301 @@
+,File name,Net string,Traces
+0,Hospital Billing - Event Log.5c0b45c3-1016-4e0f-9e46-fbe709c87fd8.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CODE NOK') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n8, 'REOPEN')->n4, (n9, 'CODE NOK')->n3, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n7, 'REJECT'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+1,Hospital Billing - Event Log.9928d542-86f0-4c4c-a439-166eb968585a.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REOPEN'), (n8, 'REJECT'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REOPEN')->n3, (n7, 'REOPEN')->n4, (n8, 'REJECT')->n1, n1->(n7, 'REOPEN'), n2->(n7, 'REOPEN'), n3->(n6, 'DELETE'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['REJECT', 'STORNO', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN']]"
+2,Hospital Billing - Event Log.102b82b3-90c3-42df-bffe-7eadaeddd652.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n2, (n4, 'STORNO')->n3, (n5, 'REJECT')->n1, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'CHANGE DIAGN', 'REJECT', 'REOPEN'], ['STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN']]"
+3,Hospital Billing - Event Log.ab6a2d58-a8dd-4978-90f8-938877df07cb.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n2, (n6, 'REJECT')->n1, (n7, 'REOPEN')->n3, n1->(n7, 'REOPEN'), n2->(n6, 'REJECT'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+4,Hospital Billing - Event Log.6a6d7cec-f2f9-445e-a8e0-5f7e4390bfe9.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'CODE ERROR'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n6, 'CODE ERROR')->n1, (n7, 'CHANGE DIAGN')->n2, (n7, 'CHANGE DIAGN')->n3, n1->(n5, 'REJECT'), n2->(n6, 'CODE ERROR'), n3->(n4, 'STORNO') ], [], [])","[['CHANGE DIAGN', 'STORNO', 'CODE ERROR', 'REJECT'], ['CHANGE DIAGN', 'CODE ERROR', 'STORNO', 'REJECT'], ['CHANGE DIAGN', 'CODE ERROR', 'REJECT', 'STORNO']]"
+5,Hospital Billing - Event Log.ffbb90b4-45a4-4763-9d0f-9df027e6d671.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n2, (n6, 'REJECT')->n1, (n6, 'REJECT')->n3, n1->(n7, 'REOPEN'), n2->(n6, 'REJECT'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'DELETE', 'REOPEN'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+6,Hospital Billing - Event Log.7789c266-bad2-41fe-b3bb-c0464283b1ea.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'DELETE'), (n6, 'STORNO'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CODE NOK') ]
+arcs: [ (n6, 'STORNO')->n1, (n7, 'REJECT')->n2, (n8, 'REOPEN')->n4, (n9, 'CODE NOK')->n3, n1->(n8, 'REOPEN'), n2->(n5, 'DELETE'), n3->(n7, 'REJECT'), n4->(n5, 'DELETE') ], [], [])","[['CODE NOK', 'REJECT', 'STORNO', 'REOPEN', 'DELETE'], ['STORNO', 'REOPEN', 'CODE NOK', 'REJECT', 'DELETE'], ['STORNO', 'CODE NOK', 'REOPEN', 'REJECT', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'STORNO', 'REOPEN', 'REJECT', 'DELETE'], ['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+7,Hospital Billing - Event Log.bc533143-fc48-41e5-b0c9-ba7a20140c0f.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n7, 'REJECT')->n3, (n8, 'REOPEN')->n4, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n6, 'DELETE'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+8,Hospital Billing - Event Log.4f68ef07-f20b-4238-b896-9e12a335ba85.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n7, 'CODE NOK')->n3, n1->(n6, 'REOPEN'), n2->(n6, 'REOPEN'), n3->(n5, 'REJECT') ], [], [])","[['CODE NOK', 'STORNO', 'REJECT', 'REOPEN'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN'], ['CODE NOK', 'REJECT', 'STORNO', 'REOPEN']]"
+9,Hospital Billing - Event Log.6018ee41-294e-4d49-9154-4cbcfd01864f.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'CODE NOK'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'REOPEN')->n3, (n7, 'CHANGE DIAGN')->n1, (n7, 'CHANGE DIAGN')->n2, n1->(n6, 'CODE NOK'), n2->(n5, 'REOPEN'), n3->(n4, 'DELETE') ], [], [])","[['CHANGE DIAGN', 'REOPEN', 'CODE NOK', 'DELETE'], ['CHANGE DIAGN', 'CODE NOK', 'REOPEN', 'DELETE'], ['CHANGE DIAGN', 'REOPEN', 'DELETE', 'CODE NOK']]"
+10,Hospital Billing - Event Log.83bcd0e8-ab9c-4a3a-b90b-384b8203b40a.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CODE NOK') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n8, 'REOPEN')->n4, (n9, 'CODE NOK')->n3, n1->(n8, 'REOPEN'), n2->(n6, 'DELETE'), n3->(n7, 'REJECT'), n4->(n6, 'DELETE') ], [], [])","[['CODE NOK', 'REJECT', 'STORNO', 'REOPEN', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'REJECT', 'REOPEN', 'STORNO', 'DELETE'], ['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+11,Hospital Billing - Event Log.8074292a-1e4d-4e35-8823-5c230badd039.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n5, 'STORNO')->n3, (n7, 'REJECT')->n1, (n8, 'REOPEN')->n4, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n9, 'CHANGE DIAGN'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'CHANGE DIAGN', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE']]"
+12,Hospital Billing - Event Log.85eb6970-d025-41a0-a742-a0da6308de4d.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n2, (n6, 'REJECT')->n1, (n7, 'REOPEN')->n3, n1->(n7, 'REOPEN'), n2->(n7, 'REOPEN'), n3->(n5, 'DELETE') ], [], [])","[['REJECT', 'STORNO', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+13,Hospital Billing - Event Log.5b84f7fe-c08b-4801-94e8-8044ff3ca7a5.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'REJECT')->n2, (n7, 'CODE NOK')->n3, n1->(n6, 'REJECT'), n2->(n5, 'DELETE'), n3->(n5, 'DELETE') ], [], [])","[['CODE NOK', 'STORNO', 'REJECT', 'DELETE'], ['STORNO', 'REJECT', 'CODE NOK', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'DELETE']]"
+14,Hospital Billing - Event Log.e44ba7b9-7724-4ee5-bf66-175bb2a3d7a6.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REOPEN')->n2, (n6, 'REJECT')->n3, (n7, 'SET STATUS')->n1, n1->(n4, 'DELETE'), n2->(n4, 'DELETE'), n3->(n7, 'SET STATUS') ], [], [])","[['REOPEN', 'REJECT', 'SET STATUS', 'DELETE'], ['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['REJECT', 'REOPEN', 'SET STATUS', 'DELETE']]"
+15,Hospital Billing - Event Log.1e115d3d-64f8-4e3d-a420-85186b6e3b8f.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE ERROR') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n7, 'CODE ERROR')->n3, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n6, 'REOPEN') ], [], [])","[['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN'], ['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN'], ['STORNO', 'REJECT', 'CODE ERROR', 'REOPEN']]"
+16,Hospital Billing - Event Log.46e70d4e-2416-43be-9a92-e4ee46ea445a.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n5, 'REJECT')->n3, n1->(n5, 'REJECT'), n2->(n6, 'REOPEN'), n3->(n7, 'CODE NOK') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CODE NOK'], ['STORNO', 'REJECT', 'CODE NOK', 'REOPEN'], ['STORNO', 'REOPEN', 'REJECT', 'CODE NOK']]"
+17,Hospital Billing - Event Log.c3118d79-9a1b-4f81-a19b-6648e4549ceb.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REOPEN')->n1, (n6, 'REJECT')->n3, (n7, 'SET STATUS')->n2, n1->(n4, 'DELETE'), n2->(n5, 'REOPEN'), n3->(n7, 'SET STATUS') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE']]"
+18,Hospital Billing - Event Log.f7906cc1-0332-46b7-b1c0-ba1e171821b4.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE ERROR') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n7, 'CODE ERROR')->n3, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n5, 'REJECT') ], [], [])","[['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN']]"
+19,Hospital Billing - Event Log.e4f4b93e-6ecd-46a7-97e4-209e34902fcf.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n5, 'REJECT')->n3, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n7, 'CODE NOK') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CODE NOK'], ['STORNO', 'REJECT', 'CODE NOK', 'REOPEN']]"
+20,Hospital Billing - Event Log.ccc0ba42-a25a-4719-b11b-4ce24a59e58f.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n1, (n8, 'CODE ERROR')->n3, n1->(n6, 'REOPEN'), n2->(n6, 'REOPEN'), n3->(n7, 'REJECT'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+21,Hospital Billing - Event Log.27c843f0-a204-4a13-bad8-c52c1b6bedc8.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN') ]
+arcs: [ (n5, 'STORNO')->n1, (n5, 'STORNO')->n2, (n7, 'REJECT')->n3, (n8, 'REOPEN')->n4, n1->(n7, 'REJECT'), n2->(n8, 'REOPEN'), n3->(n6, 'DELETE'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+22,Hospital Billing - Event Log.2fe407ed-fb19-4fb0-a2f9-4532a3c7f4c9.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'SET STATUS') ]
+arcs: [ (n6, 'REJECT')->n1, (n6, 'REJECT')->n4, (n7, 'REOPEN')->n3, (n8, 'SET STATUS')->n2, n1->(n7, 'REOPEN'), n2->(n5, 'DELETE'), n3->(n5, 'DELETE'), n4->(n8, 'SET STATUS') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['REJECT', 'REOPEN', 'SET STATUS', 'DELETE']]"
+23,Hospital Billing - Event Log.3844f9a7-cecd-45d8-a9c5-4bffea107f14.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REOPEN')->n3, (n6, 'REJECT')->n1, n1->(n5, 'REOPEN'), n2->(n6, 'REJECT'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+24,Hospital Billing - Event Log.d69bb14a-0c27-456a-ab6c-6b435d86e9d6.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REOPEN')->n2, (n6, 'REJECT')->n1, (n7, 'SET STATUS')->n3, n1->(n4, 'DELETE'), n2->(n4, 'DELETE'), n3->(n5, 'REOPEN') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['SET STATUS', 'REJECT', 'REOPEN', 'DELETE'], ['SET STATUS', 'REOPEN', 'REJECT', 'DELETE']]"
+25,Hospital Billing - Event Log.a93e1b69-02d2-48e2-a889-490df37f04fa.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'REOPEN')->n3, (n6, 'REJECT')->n1, (n6, 'REJECT')->n2, n1->(n5, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['REJECT', 'DELETE', 'REOPEN', 'CHANGE DIAGN'], ['REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN']]"
+26,Hospital Billing - Event Log.fa506857-a608-456d-8877-7bc40ff1ffb6.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE ERROR') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n7, 'CODE ERROR')->n3, n1->(n6, 'REOPEN'), n2->(n6, 'REOPEN'), n3->(n5, 'REJECT') ], [], [])","[['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN'], ['CODE ERROR', 'REJECT', 'STORNO', 'REOPEN']]"
+27,Hospital Billing - Event Log.d2e40a48-dfec-4eef-9ff4-64d2a0591596.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n1, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n2, (n8, 'CODE ERROR')->n3, n1->(n7, 'REJECT'), n2->(n9, 'CHANGE DIAGN'), n3->(n6, 'REOPEN'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'CODE ERROR', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['CODE ERROR', 'REOPEN', 'STORNO', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'CODE ERROR', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+28,Hospital Billing - Event Log.653cb384-d46b-4b8f-83d6-106479e38ab5.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'REJECT')->n2, (n7, 'CODE NOK')->n3, n1->(n6, 'REJECT'), n2->(n5, 'DELETE'), n3->(n6, 'REJECT') ], [], [])","[['CODE NOK', 'STORNO', 'REJECT', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'DELETE']]"
+29,Hospital Billing - Event Log.0756d48f-5d89-4791-9e02-509b28e557cb.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'CODE ERROR'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'CODE ERROR')->n2, (n7, 'CHANGE DIAGN')->n3, n1->(n5, 'REJECT'), n2->(n5, 'REJECT'), n3->(n4, 'STORNO') ], [], [])","[['CHANGE DIAGN', 'CODE ERROR', 'STORNO', 'REJECT'], ['CODE ERROR', 'CHANGE DIAGN', 'STORNO', 'REJECT'], ['CHANGE DIAGN', 'STORNO', 'CODE ERROR', 'REJECT']]"
+30,Hospital Billing - Event Log.66452072-7426-4df8-aa9a-cff75d5bc9d0.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REOPEN'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n6, 'REOPEN')->n3, n1->(n5, 'DELETE'), n2->(n6, 'REOPEN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'DELETE', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REOPEN', 'DELETE', 'CHANGE DIAGN']]"
+31,Hospital Billing - Event Log.c3774422-4b21-40ec-a2ff-81961709354c.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n5, 'REJECT')->n1, (n6, 'REOPEN')->n3, (n7, 'CODE NOK')->n2, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n4, 'DELETE') ], [], [])","[['REJECT', 'REOPEN', 'CODE NOK', 'DELETE'], ['CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['REJECT', 'CODE NOK', 'REOPEN', 'DELETE']]"
+32,Hospital Billing - Event Log.897509f7-076d-4c8b-af8c-86dfbc799b9b.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CODE NOK') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n8, 'REOPEN')->n4, (n9, 'CODE NOK')->n3, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n6, 'DELETE'), n4->(n6, 'DELETE') ], [], [])","[['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'CODE NOK', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'CODE NOK', 'REOPEN', 'DELETE']]"
+33,Hospital Billing - Event Log.a507859b-f0b8-423c-b0e2-3d6c63d5f018.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'CODE ERROR'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'CODE ERROR')->n2, (n7, 'CHANGE DIAGN')->n3, n1->(n5, 'REJECT'), n2->(n5, 'REJECT'), n3->(n6, 'CODE ERROR') ], [], [])","[['STORNO', 'CHANGE DIAGN', 'CODE ERROR', 'REJECT'], ['CHANGE DIAGN', 'STORNO', 'CODE ERROR', 'REJECT'], ['CHANGE DIAGN', 'CODE ERROR', 'STORNO', 'REJECT']]"
+34,Hospital Billing - Event Log.0134d6a6-63a0-4719-9c80-aa8bd423faf8.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REOPEN'), (n8, 'REJECT'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n5, 'STORNO')->n3, (n7, 'REOPEN')->n4, (n8, 'REJECT')->n1, n1->(n7, 'REOPEN'), n2->(n6, 'DELETE'), n3->(n8, 'REJECT'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'DELETE', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'DELETE', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE']]"
+35,Hospital Billing - Event Log.b2684df4-bf1e-46f4-a363-475a25a0462d.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'REJECT')->n2, (n7, 'REOPEN')->n3, n1->(n6, 'REJECT'), n2->(n5, 'DELETE'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'DELETE'], ['REOPEN', 'STORNO', 'REJECT', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+36,Hospital Billing - Event Log.23dc8381-f7c3-4753-8292-0664bc000a04.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n5, 'REOPEN')->n3, n1->(n6, 'REJECT'), n2->(n5, 'REOPEN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REOPEN', 'CHANGE DIAGN', 'REJECT'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN']]"
+37,Hospital Billing - Event Log.30032aab-4b48-417c-890b-a124ec371b5d.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n7, 'REOPEN')->n3, n1->(n6, 'REJECT'), n2->(n7, 'REOPEN'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'REOPEN', 'DELETE', 'REJECT'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'REOPEN', 'REJECT', 'DELETE']]"
+38,Hospital Billing - Event Log.a66c1b1a-860f-4dc3-8994-ab84343ad8bc.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REJECT')->n1, (n6, 'REOPEN')->n3, (n7, 'SET STATUS')->n2, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n4, 'DELETE') ], [], [])","[['SET STATUS', 'REJECT', 'REOPEN', 'DELETE'], ['REJECT', 'REOPEN', 'SET STATUS', 'DELETE'], ['REJECT', 'SET STATUS', 'REOPEN', 'DELETE']]"
+39,Hospital Billing - Event Log.4a6c2aed-c924-42d1-83e6-4b91935f5557.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n5, 'REJECT')->n1, (n6, 'REOPEN')->n3, (n7, 'CODE NOK')->n2, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n4, 'DELETE') ], [], [])","[['CODE NOK', 'REJECT', 'REOPEN', 'DELETE']]"
+40,Hospital Billing - Event Log.a4149f68-c8d3-4c50-bc21-eaaed1dd90a2.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'SET STATUS') ]
+arcs: [ (n6, 'REJECT')->n1, (n6, 'REJECT')->n3, (n7, 'SET STATUS')->n2, n1->(n4, 'DELETE'), n2->(n5, 'REOPEN'), n3->(n7, 'SET STATUS') ], [], [])","[['REJECT', 'DELETE', 'SET STATUS', 'REOPEN'], ['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['REJECT', 'SET STATUS', 'DELETE', 'REOPEN']]"
+41,Hospital Billing - Event Log.6aba46ad-453a-49bb-934f-0f2d79781f34.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n5, 'REOPEN')->n3, (n6, 'REJECT')->n2, n1->(n6, 'REJECT'), n2->(n7, 'CHANGE DIAGN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['REOPEN', 'STORNO', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+42,Hospital Billing - Event Log.81213fa6-0b35-408c-997a-51eabe427775.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'CODE NOK'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n6, 'CODE NOK')->n2, (n7, 'CHANGE DIAGN')->n1, (n7, 'CHANGE DIAGN')->n3, n1->(n6, 'CODE NOK'), n2->(n4, 'DELETE'), n3->(n5, 'REOPEN') ], [], [])","[['CHANGE DIAGN', 'REOPEN', 'CODE NOK', 'DELETE'], ['CHANGE DIAGN', 'CODE NOK', 'REOPEN', 'DELETE'], ['CHANGE DIAGN', 'CODE NOK', 'DELETE', 'REOPEN']]"
+43,Hospital Billing - Event Log.33035500-8da3-4adc-81e2-6f5d11d323b0.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n5, 'REOPEN')->n3, (n6, 'REJECT')->n2, n1->(n5, 'REOPEN'), n2->(n7, 'CHANGE DIAGN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN']]"
+44,Hospital Billing - Event Log.f5bb0bcf-e4e0-42d4-84de-79de72722dcd.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REJECT'), (n7, 'CODE ERROR'), (n8, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n1, (n7, 'CODE ERROR')->n2, (n8, 'CHANGE DIAGN')->n3, (n8, 'CHANGE DIAGN')->n4, n1->(n6, 'REJECT'), n2->(n6, 'REJECT'), n3->(n7, 'CODE ERROR'), n4->(n5, 'STORNO') ], [], [])","[['CHANGE DIAGN', 'CODE ERROR', 'STORNO', 'REJECT'], ['CHANGE DIAGN', 'STORNO', 'CODE ERROR', 'REJECT']]"
+45,Hospital Billing - Event Log.a9d158f8-6d59-41f4-ab03-e3a9b286d8e3.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n7, 'REJECT')->n3, (n8, 'REOPEN')->n4, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n9, 'CHANGE DIAGN'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN', 'DELETE']]"
+46,Hospital Billing - Event Log.cdaed1f1-1ac1-4d3a-993c-ca8e0af22ee9.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REOPEN')->n3, (n6, 'REJECT')->n1, n1->(n5, 'REOPEN'), n2->(n7, 'CHANGE DIAGN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['REJECT', 'REOPEN', 'STORNO', 'CHANGE DIAGN'], ['REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN']]"
+47,Hospital Billing - Event Log.0c69aa4a-93a5-4dea-8c37-8d533fe0f90c.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN') ]
+arcs: [ (n5, 'STORNO')->n2, (n5, 'STORNO')->n3, (n7, 'REJECT')->n1, (n8, 'REOPEN')->n4, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n8, 'REOPEN'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+48,Hospital Billing - Event Log.d6a00b66-eaec-483d-a628-5aa660e571c8.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'CODE NOK'), (n9, 'CODE ERROR') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REJECT')->n1, (n8, 'CODE NOK')->n4, (n9, 'CODE ERROR')->n3, n1->(n7, 'REOPEN'), n2->(n7, 'REOPEN'), n3->(n6, 'REJECT'), n4->(n9, 'CODE ERROR') ], [], [])","[['CODE NOK', 'STORNO', 'CODE ERROR', 'REJECT', 'REOPEN'], ['STORNO', 'CODE NOK', 'CODE ERROR', 'REJECT', 'REOPEN'], ['CODE NOK', 'CODE ERROR', 'REJECT', 'STORNO', 'REOPEN'], ['CODE NOK', 'CODE ERROR', 'STORNO', 'REJECT', 'REOPEN']]"
+49,Hospital Billing - Event Log.303ebe68-7e25-4dc2-aea6-665eef2b6401.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'REJECT')->n2, (n6, 'REJECT')->n3, n1->(n6, 'REJECT'), n2->(n5, 'DELETE'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REJECT', 'DELETE', 'CHANGE DIAGN']]"
+50,Hospital Billing - Event Log.dbbc1aee-b0c3-41ec-b93e-f7eff3ae544d.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n5, 'REJECT')->n3, n1->(n5, 'REJECT'), n2->(n6, 'REOPEN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+51,Hospital Billing - Event Log.b6c39310-734c-44d1-9fd8-c3362a538a36.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REJECT')->n1, (n5, 'REJECT')->n3, (n6, 'REOPEN')->n2, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n7, 'SET STATUS') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['REJECT', 'REOPEN', 'SET STATUS', 'DELETE'], ['REJECT', 'REOPEN', 'DELETE', 'SET STATUS']]"
+52,Hospital Billing - Event Log.969aca64-a3d8-4ee7-9d4b-62aedde45fea.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n6, 'REJECT')->n3, n1->(n6, 'REJECT'), n2->(n7, 'REOPEN'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'DELETE'], ['STORNO', 'REJECT', 'DELETE', 'REOPEN'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+53,Hospital Billing - Event Log.24c989c5-159a-4925-a484-e044d03bda42.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'CODE ERROR'), (n9, 'CODE NOK') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REJECT')->n1, (n8, 'CODE ERROR')->n3, (n9, 'CODE NOK')->n4, n1->(n7, 'REOPEN'), n2->(n6, 'REJECT'), n3->(n7, 'REOPEN'), n4->(n8, 'CODE ERROR') ], [], [])","[['CODE NOK', 'STORNO', 'CODE ERROR', 'REJECT', 'REOPEN'], ['STORNO', 'REJECT', 'CODE NOK', 'CODE ERROR', 'REOPEN'], ['STORNO', 'CODE NOK', 'CODE ERROR', 'REJECT', 'REOPEN'], ['CODE NOK', 'CODE ERROR', 'STORNO', 'REJECT', 'REOPEN'], ['CODE NOK', 'STORNO', 'REJECT', 'CODE ERROR', 'REOPEN'], ['STORNO', 'CODE NOK', 'REJECT', 'CODE ERROR', 'REOPEN']]"
+54,Hospital Billing - Event Log.5260314e-ce2c-495d-bdc3-dfca26068ee2.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'REJECT')->n1, (n5, 'REJECT')->n2, (n6, 'REOPEN')->n3, n1->(n6, 'REOPEN'), n2->(n7, 'CHANGE DIAGN'), n3->(n4, 'DELETE') ], [], [])","[['REJECT', 'CHANGE DIAGN', 'REOPEN', 'DELETE'], ['REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE']]"
+55,Hospital Billing - Event Log.1ad25911-b2d0-4478-b8a0-c23ef487efda.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n5, 'REJECT')->n1, (n5, 'REJECT')->n2, (n7, 'CODE NOK')->n3, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n5, 'REJECT') ], [], [])","[['CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'REJECT', 'DELETE', 'REOPEN']]"
+56,Hospital Billing - Event Log.f084ddcd-bac3-4266-b888-a0b6ab90d79a.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n6, 'REJECT')->n3, n1->(n6, 'REJECT'), n2->(n7, 'CHANGE DIAGN'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'CHANGE DIAGN', 'REJECT', 'DELETE']]"
+57,Hospital Billing - Event Log.02a4e24c-ab78-4641-85fa-1b4d13748358.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'CODE NOK'), (n9, 'CODE ERROR') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REJECT')->n1, (n8, 'CODE NOK')->n4, (n9, 'CODE ERROR')->n3, n1->(n7, 'REOPEN'), n2->(n6, 'REJECT'), n3->(n6, 'REJECT'), n4->(n9, 'CODE ERROR') ], [], [])","[['CODE NOK', 'CODE ERROR', 'STORNO', 'REJECT', 'REOPEN'], ['STORNO', 'CODE NOK', 'CODE ERROR', 'REJECT', 'REOPEN'], ['CODE NOK', 'STORNO', 'CODE ERROR', 'REJECT', 'REOPEN']]"
+58,Hospital Billing - Event Log.eb6ba80d-604b-4fc2-96b7-ebb6ef131d62.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REOPEN'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n6, 'REOPEN')->n3, n1->(n6, 'REOPEN'), n2->(n7, 'CHANGE DIAGN'), n3->(n5, 'DELETE') ], [], [])","[['STORNO', 'CHANGE DIAGN', 'REOPEN', 'DELETE'], ['STORNO', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REOPEN', 'DELETE', 'CHANGE DIAGN']]"
+59,Hospital Billing - Event Log.eca1721e-a8c3-4fe9-a818-9163f8c917dd.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REJECT')->n1, (n5, 'REJECT')->n3, (n7, 'SET STATUS')->n2, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n7, 'SET STATUS') ], [], [])","[['REJECT', 'REOPEN', 'SET STATUS', 'DELETE'], ['REJECT', 'SET STATUS', 'DELETE', 'REOPEN'], ['REJECT', 'SET STATUS', 'REOPEN', 'DELETE']]"
+60,Hospital Billing - Event Log.6d361982-5513-4d1c-8af4-ae84c7bdefae.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n5, 'REJECT')->n3, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+61,Hospital Billing - Event Log.65eb9172-cb3f-4789-972e-b4f8bad3230b.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n5, 'REJECT')->n1, (n6, 'REOPEN')->n3, (n7, 'CODE NOK')->n2, n1->(n4, 'DELETE'), n2->(n5, 'REJECT'), n3->(n4, 'DELETE') ], [], [])","[['CODE NOK', 'REOPEN', 'REJECT', 'DELETE'], ['REOPEN', 'CODE NOK', 'REJECT', 'DELETE'], ['CODE NOK', 'REJECT', 'REOPEN', 'DELETE']]"
+62,Hospital Billing - Event Log.93c812ff-6bc7-4456-867d-379c1cba1de3.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REJECT')->n1, (n6, 'REJECT')->n4, (n8, 'CODE ERROR')->n3, n1->(n7, 'REOPEN'), n2->(n6, 'REJECT'), n3->(n6, 'REJECT'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN'], ['STORNO', 'CODE ERROR', 'REJECT', 'CHANGE DIAGN', 'REOPEN'], ['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+63,Hospital Billing - Event Log.7f1b950d-6ec9-41ea-8303-9747036ca2d3.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n1, (n8, 'CODE ERROR')->n3, n1->(n6, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n7, 'REJECT'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+64,Hospital Billing - Event Log.014fa376-f80f-4342-918d-6ba637247f5a.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n5, 'REJECT')->n1, (n7, 'CODE NOK')->n2, (n7, 'CODE NOK')->n3, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n5, 'REJECT') ], [], [])","[['CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'DELETE', 'REJECT', 'REOPEN'], ['CODE NOK', 'REJECT', 'DELETE', 'REOPEN']]"
+65,Hospital Billing - Event Log.c757abf0-a8fa-4136-a019-7480700367d7.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'CODE ERROR'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n7, 'CHANGE DIAGN')->n2, (n7, 'CHANGE DIAGN')->n3, n1->(n5, 'REJECT'), n2->(n6, 'CODE ERROR'), n3->(n4, 'STORNO') ], [], [])","[['CHANGE DIAGN', 'STORNO', 'CODE ERROR', 'REJECT'], ['CHANGE DIAGN', 'CODE ERROR', 'STORNO', 'REJECT'], ['CHANGE DIAGN', 'STORNO', 'REJECT', 'CODE ERROR']]"
+66,Hospital Billing - Event Log.86c42a6e-943f-4a77-80ad-312c07353817.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'SET STATUS') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n5, 'REJECT')->n3, n1->(n5, 'REJECT'), n2->(n6, 'REOPEN'), n3->(n7, 'SET STATUS') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'SET STATUS'], ['STORNO', 'REJECT', 'REOPEN', 'SET STATUS'], ['STORNO', 'REJECT', 'SET STATUS', 'REOPEN']]"
+67,Hospital Billing - Event Log.152d0174-a8bb-4bc0-974e-94811664c548.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REOPEN')->n3, (n6, 'REJECT')->n1, n1->(n5, 'REOPEN'), n2->(n5, 'REOPEN'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+68,Hospital Billing - Event Log.87a85a03-cece-4344-91c3-f674ead966bc.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'SET STATUS') ]
+arcs: [ (n6, 'REJECT')->n1, (n6, 'REJECT')->n4, (n7, 'REOPEN')->n2, (n8, 'SET STATUS')->n3, n1->(n7, 'REOPEN'), n2->(n5, 'DELETE'), n3->(n7, 'REOPEN'), n4->(n8, 'SET STATUS') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE']]"
+69,Hospital Billing - Event Log.d3916ab1-75c8-4384-9313-2fc360f3a1e6.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n2, (n4, 'STORNO')->n3, (n5, 'REJECT')->n1, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n7, 'CODE NOK') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CODE NOK'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN'], ['STORNO', 'REJECT', 'CODE NOK', 'REOPEN']]"
+70,Hospital Billing - Event Log.e0181c48-e064-43ea-bae6-2d830eddece9.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n7, 'CODE NOK')->n3, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n5, 'REJECT') ], [], [])","[['STORNO', 'CODE NOK', 'REJECT', 'REOPEN'], ['CODE NOK', 'STORNO', 'REJECT', 'REOPEN']]"
+71,Hospital Billing - Event Log.faacb0c5-073d-4d1a-8883-e97d265d6fb1.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n1, (n5, 'STORNO')->n2, (n7, 'REJECT')->n3, (n8, 'REOPEN')->n4, n1->(n7, 'REJECT'), n2->(n8, 'REOPEN'), n3->(n9, 'CHANGE DIAGN'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'REJECT', 'CHANGE DIAGN', 'REOPEN', 'DELETE'], ['STORNO', 'REOPEN', 'DELETE', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REOPEN', 'REJECT', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE']]"
+72,Hospital Billing - Event Log.b179f7c1-b3a9-4f3f-a1f4-dc382bab07dc.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'REOPEN')->n2, (n5, 'REOPEN')->n3, (n6, 'REJECT')->n1, n1->(n5, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN']]"
+73,Hospital Billing - Event Log.95a09df1-a73b-416e-b148-6a144ab517d1.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'CODE NOK') ]
+arcs: [ (n4, 'STORNO')->n1, (n6, 'REJECT')->n2, (n7, 'CODE NOK')->n3, n1->(n5, 'DELETE'), n2->(n5, 'DELETE'), n3->(n6, 'REJECT') ], [], [])","[['CODE NOK', 'REJECT', 'STORNO', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'DELETE'], ['CODE NOK', 'STORNO', 'REJECT', 'DELETE']]"
+74,Hospital Billing - Event Log.b3158e84-aae5-49f9-9b90-bd04b7f3b735.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n2, (n4, 'STORNO')->n3, (n6, 'REJECT')->n1, n1->(n7, 'REOPEN'), n2->(n5, 'DELETE'), n3->(n6, 'REJECT') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'DELETE', 'REOPEN'], ['STORNO', 'DELETE', 'REJECT', 'REOPEN']]"
+75,Hospital Billing - Event Log.55f7d0a6-e516-4766-8d63-d7c6a55f405b.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'DELETE'), (n6, 'REOPEN'), (n7, 'CODE NOK'), (n8, 'CHANGE DIAGN') ]
+arcs: [ (n6, 'REOPEN')->n4, (n7, 'CODE NOK')->n2, (n8, 'CHANGE DIAGN')->n1, (n8, 'CHANGE DIAGN')->n3, n1->(n7, 'CODE NOK'), n2->(n5, 'DELETE'), n3->(n6, 'REOPEN'), n4->(n5, 'DELETE') ], [], [])","[['CHANGE DIAGN', 'REOPEN', 'CODE NOK', 'DELETE'], ['CHANGE DIAGN', 'CODE NOK', 'REOPEN', 'DELETE']]"
+76,Hospital Billing - Event Log.d90d8d21-8d44-4633-8e4c-a6c708ebfa8d.pnml,"(places: [ n1, n2, n3, n4, n5 ]
+transitions: [ (n10, 'CODE NOK'), (n6, 'STORNO'), (n7, 'DELETE'), (n8, 'REJECT'), (n9, 'REOPEN') ]
+arcs: [ (n10, 'CODE NOK')->n4, (n6, 'STORNO')->n2, (n8, 'REJECT')->n1, (n8, 'REJECT')->n3, (n9, 'REOPEN')->n5, n1->(n9, 'REOPEN'), n2->(n8, 'REJECT'), n3->(n7, 'DELETE'), n4->(n8, 'REJECT'), n5->(n7, 'DELETE') ], [], [])","[['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE']]"
+77,Hospital Billing - Event Log.39e15912-98e1-4086-8428-9ff13b017705.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'DELETE'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'SET STATUS') ]
+arcs: [ (n6, 'REOPEN')->n2, (n7, 'REJECT')->n4, (n8, 'SET STATUS')->n1, (n8, 'SET STATUS')->n3, n1->(n5, 'DELETE'), n2->(n5, 'DELETE'), n3->(n6, 'REOPEN'), n4->(n8, 'SET STATUS') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE']]"
+78,Hospital Billing - Event Log.9a62253c-8b42-46e2-b129-ff5967221283.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n4, 'STORNO')->n2, (n6, 'REJECT')->n1, (n7, 'REOPEN')->n3, n1->(n7, 'REOPEN'), n2->(n5, 'DELETE'), n3->(n5, 'DELETE') ], [], [])","[['REJECT', 'STORNO', 'REOPEN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['REJECT', 'REOPEN', 'STORNO', 'DELETE']]"
+79,Hospital Billing - Event Log.623790fe-21ad-41a7-b21b-e57022827299.pnml,"(places: [ n1, n2, n3, n4, n5 ]
+transitions: [ (n10, 'CHANGE DIAGN'), (n6, 'STORNO'), (n7, 'REOPEN'), (n8, 'REJECT'), (n9, 'CODE ERROR') ]
+arcs: [ (n6, 'STORNO')->n2, (n7, 'REOPEN')->n5, (n8, 'REJECT')->n1, (n8, 'REJECT')->n4, (n9, 'CODE ERROR')->n3, n1->(n7, 'REOPEN'), n2->(n8, 'REJECT'), n3->(n8, 'REJECT'), n4->(n10, 'CHANGE DIAGN'), n5->(n10, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+80,Hospital Billing - Event Log.59a61444-0446-443b-8214-4ba9c6919ae9.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n1, (n7, 'REJECT')->n3, n1->(n6, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n8, 'CHANGE DIAGN'), n4->(n8, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+81,Hospital Billing - Event Log.a362db75-9bbf-4263-8081-331acf60b2cb.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REOPEN'), (n8, 'REJECT'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REOPEN')->n3, (n7, 'REOPEN')->n4, (n8, 'REJECT')->n1, n1->(n7, 'REOPEN'), n2->(n8, 'REJECT'), n3->(n6, 'DELETE'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE']]"
+82,Hospital Billing - Event Log.c2ce17ac-308b-402e-9bfb-c2dbee181e0e.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'REOPEN'), (n8, 'CODE NOK') ]
+arcs: [ (n6, 'REJECT')->n1, (n6, 'REJECT')->n2, (n7, 'REOPEN')->n4, (n8, 'CODE NOK')->n3, n1->(n7, 'REOPEN'), n2->(n5, 'DELETE'), n3->(n6, 'REJECT'), n4->(n5, 'DELETE') ], [], [])","[['CODE NOK', 'REJECT', 'REOPEN', 'DELETE']]"
+83,Hospital Billing - Event Log.9293af4f-0ae6-4500-86d4-336eb8c255dd.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REOPEN'), (n8, 'REJECT'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n1, (n5, 'STORNO')->n2, (n7, 'REOPEN')->n4, (n8, 'REJECT')->n3, n1->(n8, 'REJECT'), n2->(n7, 'REOPEN'), n3->(n6, 'DELETE'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REOPEN', 'CHANGE DIAGN', 'REJECT', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REOPEN', 'REJECT', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'DELETE', 'REOPEN', 'CHANGE DIAGN']]"
+84,Hospital Billing - Event Log.c56c1d71-eb84-4b30-8c7d-5cb97dfd265d.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n1, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n3, (n8, 'CODE ERROR')->n2, n1->(n6, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n9, 'CHANGE DIAGN'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REOPEN', 'CODE ERROR', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'CODE ERROR', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['CODE ERROR', 'REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+85,Hospital Billing - Event Log.156667d6-b016-4034-8a7c-4c4b501bf8ed.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CODE NOK') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n7, 'REJECT')->n3, (n9, 'CODE NOK')->n4, n1->(n8, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n6, 'DELETE'), n4->(n7, 'REJECT') ], [], [])","[['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'STORNO', 'REJECT', 'DELETE', 'REOPEN'], ['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['STORNO', 'CODE NOK', 'REJECT', 'DELETE', 'REOPEN']]"
+86,Hospital Billing - Event Log.a3b2b4d4-a50f-494a-b29a-906cb3036073.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n1, (n5, 'STORNO')->n2, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n3, n1->(n7, 'REJECT'), n2->(n6, 'REOPEN'), n3->(n8, 'CHANGE DIAGN'), n4->(n8, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+87,Hospital Billing - Event Log.5e9e3dcf-d322-4b16-88c1-2280b7f5a529.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'DELETE'), (n6, 'REJECT'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n4, 'STORNO')->n1, (n4, 'STORNO')->n2, (n6, 'REJECT')->n3, n1->(n5, 'DELETE'), n2->(n6, 'REJECT'), n3->(n7, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'DELETE', 'REJECT', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'DELETE', 'CHANGE DIAGN']]"
+88,Hospital Billing - Event Log.cbbbf7ac-9cd0-46cb-bba2-2da4765daa45.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n5, 'STORNO')->n3, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n1, n1->(n6, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n6, 'REOPEN'), n4->(n8, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+89,Hospital Billing - Event Log.dd245fee-7fe0-4625-a765-42262eed073a.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'STORNO'), (n6, 'REJECT'), (n7, 'REOPEN') ]
+arcs: [ (n5, 'STORNO')->n1, (n6, 'REJECT')->n2, (n7, 'REOPEN')->n3, n1->(n7, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n4, 'DELETE') ], [], [])","[['STORNO', 'REOPEN', 'REJECT', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE'], ['REJECT', 'STORNO', 'REOPEN', 'DELETE']]"
+90,Hospital Billing - Event Log.e50e471c-f175-49f5-93f1-89b3e97f0a45.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'CODE NOK'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'REOPEN')->n3, (n6, 'CODE NOK')->n1, (n7, 'CHANGE DIAGN')->n2, n1->(n4, 'DELETE'), n2->(n5, 'REOPEN'), n3->(n4, 'DELETE') ], [], [])","[['CODE NOK', 'CHANGE DIAGN', 'REOPEN', 'DELETE'], ['CHANGE DIAGN', 'CODE NOK', 'REOPEN', 'DELETE'], ['CHANGE DIAGN', 'REOPEN', 'CODE NOK', 'DELETE']]"
+91,Hospital Billing - Event Log.da193469-15c8-41c7-93ad-879d31578163.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'CODE NOK'), (n7, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'REOPEN')->n3, (n6, 'CODE NOK')->n2, (n7, 'CHANGE DIAGN')->n1, n1->(n6, 'CODE NOK'), n2->(n4, 'DELETE'), n3->(n4, 'DELETE') ], [], [])","[['REOPEN', 'CHANGE DIAGN', 'CODE NOK', 'DELETE'], ['CHANGE DIAGN', 'CODE NOK', 'REOPEN', 'DELETE'], ['CHANGE DIAGN', 'REOPEN', 'CODE NOK', 'DELETE']]"
+92,Hospital Billing - Event Log.213dab7b-5d16-4ae1-a47f-6d0513dd812e.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'SET STATUS') ]
+arcs: [ (n5, 'REJECT')->n1, (n6, 'REOPEN')->n2, (n7, 'SET STATUS')->n3, n1->(n6, 'REOPEN'), n2->(n4, 'DELETE'), n3->(n6, 'REOPEN') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['SET STATUS', 'REJECT', 'REOPEN', 'DELETE']]"
+93,Hospital Billing - Event Log.88c101db-e9f3-4400-a8fe-25b954b89d92.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'STORNO'), (n5, 'REJECT'), (n6, 'REOPEN'), (n7, 'SET STATUS') ]
+arcs: [ (n4, 'STORNO')->n2, (n5, 'REJECT')->n1, (n5, 'REJECT')->n3, n1->(n6, 'REOPEN'), n2->(n5, 'REJECT'), n3->(n7, 'SET STATUS') ], [], [])","[['STORNO', 'REJECT', 'SET STATUS', 'REOPEN'], ['STORNO', 'REJECT', 'REOPEN', 'SET STATUS']]"
+94,Hospital Billing - Event Log.633e5d39-155b-4a08-ac42-13f8e8259dd6.pnml,"(places: [ n1, n2, n3, n4, n5 ]
+transitions: [ (n10, 'CHANGE DIAGN'), (n6, 'STORNO'), (n7, 'DELETE'), (n8, 'REOPEN'), (n9, 'REJECT') ]
+arcs: [ (n6, 'STORNO')->n2, (n6, 'STORNO')->n3, (n8, 'REOPEN')->n4, (n8, 'REOPEN')->n5, (n9, 'REJECT')->n1, n1->(n8, 'REOPEN'), n2->(n9, 'REJECT'), n3->(n8, 'REOPEN'), n4->(n7, 'DELETE'), n5->(n10, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE']]"
+95,Hospital Billing - Event Log.55233922-b622-4d19-8939-91a79c292b2a.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REOPEN'), (n8, 'REJECT'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REOPEN')->n4, (n8, 'REJECT')->n1, (n8, 'REJECT')->n3, n1->(n7, 'REOPEN'), n2->(n8, 'REJECT'), n3->(n6, 'DELETE'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'REJECT', 'DELETE', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN', 'DELETE'], ['STORNO', 'REJECT', 'REOPEN', 'DELETE', 'CHANGE DIAGN']]"
+96,Hospital Billing - Event Log.54233753-a15a-4886-ac44-9698c58a2d09.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'DELETE'), (n7, 'REJECT'), (n8, 'REOPEN'), (n9, 'CODE NOK') ]
+arcs: [ (n5, 'STORNO')->n2, (n7, 'REJECT')->n1, (n8, 'REOPEN')->n4, (n9, 'CODE NOK')->n3, n1->(n8, 'REOPEN'), n2->(n8, 'REOPEN'), n3->(n7, 'REJECT'), n4->(n6, 'DELETE') ], [], [])","[['STORNO', 'CODE NOK', 'REJECT', 'REOPEN', 'DELETE'], ['CODE NOK', 'REJECT', 'STORNO', 'REOPEN', 'DELETE'], ['CODE NOK', 'STORNO', 'REJECT', 'REOPEN', 'DELETE']]"
+97,Hospital Billing - Event Log.9f88ae86-1c5b-412d-a69d-a0e97696f65f.pnml,"(places: [ n1, n2, n3 ]
+transitions: [ (n4, 'DELETE'), (n5, 'REOPEN'), (n6, 'REJECT'), (n7, 'SET STATUS') ]
+arcs: [ (n6, 'REJECT')->n3, (n7, 'SET STATUS')->n1, (n7, 'SET STATUS')->n2, n1->(n4, 'DELETE'), n2->(n5, 'REOPEN'), n3->(n7, 'SET STATUS') ], [], [])","[['REJECT', 'SET STATUS', 'REOPEN', 'DELETE'], ['REJECT', 'SET STATUS', 'DELETE', 'REOPEN']]"
+98,Hospital Billing - Event Log.de6738ab-e4bf-4ff6-a627-19773e25f6bb.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n2, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n1, (n8, 'CODE ERROR')->n3, n1->(n6, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n6, 'REOPEN'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'REJECT', 'CODE ERROR', 'REOPEN', 'CHANGE DIAGN'], ['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN']]"
+99,Hospital Billing - Event Log.e7b61f09-0f55-445f-a202-46a8a95167f2.pnml,"(places: [ n1, n2, n3, n4 ]
+transitions: [ (n5, 'STORNO'), (n6, 'REOPEN'), (n7, 'REJECT'), (n8, 'CODE ERROR'), (n9, 'CHANGE DIAGN') ]
+arcs: [ (n5, 'STORNO')->n3, (n6, 'REOPEN')->n4, (n7, 'REJECT')->n1, (n8, 'CODE ERROR')->n2, n1->(n6, 'REOPEN'), n2->(n7, 'REJECT'), n3->(n9, 'CHANGE DIAGN'), n4->(n9, 'CHANGE DIAGN') ], [], [])","[['STORNO', 'CODE ERROR', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'STORNO', 'REJECT', 'REOPEN', 'CHANGE DIAGN'], ['CODE ERROR', 'REJECT', 'REOPEN', 'STORNO', 'CHANGE DIAGN'], ['CODE ERROR', 'REJECT', 'STORNO', 'REOPEN', 'CHANGE DIAGN']]"
